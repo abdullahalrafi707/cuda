@@ -1,0 +1,640 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+}
+a {
+    text-decoration: none;
+}
+/* preloader start */
+#preloader {
+  background-color: transparent;
+  height: 12rem;
+  width: 12rem;
+  margin: -7.6rem 0 0 -7.6rem;
+  border-radius: 50%;
+  border: 1.3rem solid #f3f3f3;
+  border-left: 1.3rem solid blue;
+  border-right: 1.3rem solid blue;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  animation: spin 2s infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* preloader end */
+    /* scroll bar start */
+::-webkit-scrollbar {
+    width: initial;
+    background: #87509C;
+  }
+  
+  /* Tracker */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.5rem gray; 
+  }
+::-webkit-scrollbar-thumb {
+    background-color: dodgerblue;
+    border-radius: 0.5rem;
+}
+  /* scroll bar end */
+  
+ /* reuseable : start */
+/* grid system :start */ 
+
+/*clearfix :start*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+/*clearfix: end*/
+
+/*GROUPING : start*/
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+.row {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+/*GROUPING : end*/
+
+/* GRID COLUMN SETUP: start */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+
+.col:first-child { margin-left: 0rem; } /* all browsers except IE6 and lower */
+.col:last-child { margin-left: 0rem; } 
+/* GRID COLUMN SETUP : end */
+.span-1-of-2 {
+    width: 100%;
+  }
+
+.span-1-of-4 {
+    width: 100%;
+  }
+/* grid system : end */
+h2 {
+    letter-spacing: 0.8rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+h2::after {
+   content: "";
+   width: 10rem;
+   height: 0.5rem;
+   background-color: #14A58C;
+   display: block;
+   margin: auto;
+   margin-top: 1rem;
+}
+h3 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-top: 5rem;
+}
+.box img {
+    margin-top: 5rem;
+    height: 15rem;
+}
+.box p {
+    margin-top: 2.5rem;
+    line-height: 2.5rem;
+}
+ /* reuseable: end */
+/* topnav start */
+   /* menu icon start*/
+ #menu-icon {
+  margin-top: 0.8rem;
+  float: right;
+  display: none;
+}
+.bar1, .bar2, .bar3 {
+ width: 35px;
+ height: 5px;
+ background-color: #FFFFFF;
+ margin: 5px 0px;
+ transition: all 0.5s ease;
+}
+
+.container {
+ display: inline-block;
+ cursor: pointer;
+}
+/* Rotate first bar */
+.change .bar1 {
+transform: rotate(-45deg) translate(-9px , 6px);
+}
+/* Fade out the second bar */
+.change .bar2 {
+ opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3 {
+ transform: rotate(45deg) translate(-8px , -8px);
+}
+/* menu icon end*/
+#top-nav { /*id of the nav container */
+ background-color: #87509C;
+ padding-top: 6rem;
+ transition: 0.4s;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 99;
+}
+.main-body-start { /*style main body starter div*/
+ padding-top: 29.5rem;
+}
+#top-nav a {
+ float: left;
+ color: white;
+ text-align: center;
+ padding: 1.2rem;
+ font-size: 1.8rem;
+ line-height: 2.5rem;
+ border-radius: 0.4rem;
+}
+#top-nav #logo {
+ font-size: 3.5rem;
+ font-weight: bold;
+ transition: 0.4s;
+}
+/* grouping */
+.group:before,
+.group:after {
+   content:"";
+   display:table;
+}
+.group:after {
+   clear:both;
+}
+.group {
+   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+/* grouping */
+.nav-menu {
+ float: right;
+}
+.nav-menu a.active {
+ background-color: dodgerblue;
+ color: white;
+}
+#top-nav a:hover {
+ background-color: #bbb;
+ color: black;
+}
+
+  /*topnav end */
+  /* header start */
+  #header {
+      color: white;
+      width: 100%;
+      padding-bottom: 15rem;
+      background-color: #87509C;
+  }
+  #header h1 {
+      display: block;
+      width: 70%;
+      margin: auto;
+      font-size: 4.2rem;
+      text-align: center;
+      margin-bottom: 6rem;
+  }
+  #header a {
+      display: block;
+      width: 30rem;
+      margin: auto;
+      font-size: 1.8rem;
+      color: white;
+      background-color: #EB7D4B;
+      text-align: center;
+      padding: 3rem 7rem;
+  }
+  #header a:hover {
+      background-color: #eb7e4bce;
+      box-shadow: inset black  0 0 5rem;
+  }
+  /* header end */
+  /* service section start */
+  #service-section {
+      padding: 12rem;
+      background-color: #17C2A4;
+      color: #FFFFFF;
+      text-align: center;
+      width: 100%;
+  }
+  #service-section h2 {
+      font-size: 4rem;
+      font-weight: bold;
+  }
+.section-subtitle {
+    width: 49rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+  /* service section end */
+
+  /* team section start */
+#team-section {
+    padding: 12rem;
+    background-color: #E7F1F8;
+    color: #3C4761;
+    text-align: center;
+    width: 100%;
+}
+#team-section h2::after {
+    background-color: #C8D9E5;
+}
+.member-contact a img {
+    height: 4rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    transition: 0.4s;
+ }
+ .member-contact a img:hover {
+     transform: rotate(360deg);
+ }
+.box h4 {
+    color: #79D0EE;
+    margin-top: 1.5rem;
+}
+/* team section end */
+/* skill section start */
+#skill-section {
+    padding: 12rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+#skill-section h2::after {
+    background-color: #DFE8ED;
+}
+.skills {
+    margin-top: 8rem;
+}
+.skills h3 {
+    margin-top: 1rem;
+}
+svg.radial-progress {
+    height: auto;
+    max-width: 200px;
+    padding: 1em;
+    transform: rotate(-90deg);
+    width: 100%;
+  }
+  
+  svg.radial-progress circle {
+    fill: rgba(0,0,0,0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-width: 10;
+  }
+  
+  svg.radial-progress circle.incomplete { opacity: 0.25; }
+  
+  svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; /* Circumference */ }
+  
+  svg.radial-progress text {
+    fill: #301011;
+    font: 400 1em/1 'Oswald', sans-serif;
+    text-anchor: middle;
+  }
+#web-design svg circle { stroke: #30BAE7; }  
+#html-css svg circle { stroke: #D74680; }  
+#graphic-design svg circle { stroke: #15C7A8; }  
+#ui-ux svg circle { stroke: #EB7D4B; }  
+/* skill section end */
+/* portfolio section start */
+#portfolio-section {
+    padding: 12rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+    background-color: #FFDD99;
+}
+#portfolio-section h2::after {
+    background-color: #EBC985;
+}
+#portfolio-main button {
+    background-color: #EBC985;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    margin-top: 4rem;
+}
+#portfolio-main button:hover {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+}
+
+#portfolio-items {
+    margin-top: 5rem;
+}
+
+.items h4 {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+}
+#load-more {
+    background-color: #17C2A4;
+    padding: 2.5rem 5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin-top: 4rem;
+}
+#load-more:hover {
+    box-shadow: inset black  0 0 5rem;
+}
+/* portfolio section end */
+/* review section start */
+#review-section {
+    padding: 12rem;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    background-color: #D74680;
+}
+#review-section h2::after {
+    background-color: #B73C6D;
+}
+.client {
+    width: 50%;
+    display: block;
+    float: left;
+    margin-top: 15rem;
+}
+.client img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    float: left;
+    display: block;
+}
+.client-review {
+    margin-left: 5rem;
+    float: left;
+    width: 40rem;
+    text-align: left;
+    font-size: 2.1rem;
+}
+.client-review h3 {
+    margin-top: 4rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.client-review h4 {
+    font-size: 1.8rem;
+    color: #F7BF94;
+}
+/* review section end*/
+
+/* contract start */
+#contact-section {
+    padding: 12rem;
+    width: 100%;
+    text-align: center;
+    background-color: #3C5499;
+    color: #FFFFFF;
+}
+#contact-section h2::after {
+    background-color: #263A71;
+}
+#input-name , #input-email {
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    width: 45%;
+    outline: none;
+    padding: 2.4rem;
+    color: white;
+    background-color: #273A71;
+}
+#input-text {
+    width: 100%;
+    outline: none;
+    color: white;
+    padding: 2.4rem;
+    background-color: #273A71;
+}
+#input-email {
+    margin-left: 10%;
+}
+input[type = "submit"] {
+    background-color: #30BAE7;
+    padding: 2.5rem 5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin-top: 4rem;
+    border-radius: 0.5rem;
+}
+input[type = "submit"]:hover {
+    box-shadow: inset black  0 0 5rem;
+}
+/* contract end */
+/* foooter start */
+#footer {
+    background-color: #344B8E;
+    color: #FFFFFF;
+    padding: 3rem 12rem;
+    text-align: center;
+}
+#footer a {
+    color: #FFFFFF;
+    margin-left: 5rem;
+    font-size: 2.4rem;
+}
+#footer a:first-child {
+    margin-left: 0rem;
+}
+#footer a:hover {
+    color: #30BAE7;
+}
+/* footer end */
+
+/* media query start */
+   /* media query for grid system :start */
+   @media only screen and (min-width: 480px) {
+    .span-1-of-4 {
+            width: 23.8%; 
+        }
+    .span-1-of-2 {
+        width: 50%;
+    }    
+  }
+     /* media query for grid system :end */
+  @media screen and (max-width :1300px) {
+    #skill-section , #portfolio-section , #review-section , #contact-section  {
+      padding: 6rem;
+    }
+  }
+  @media screen and (max-width :1250px) {
+    #team-section {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+    .span-1-of-4 {
+      width: 50%;
+      margin: auto;
+    }
+    #footer {
+      text-align: center;
+    }
+    #portfolio-section {
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+    }
+    #portfolio-section .span-1-of-2 {
+      width: 100%;
+      float: none;
+      margin-top: 1rem;
+    }
+    .client {
+      float: none;
+      width: 100%;
+    }
+    .client img {
+      float: none;
+    }
+    .client * {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+   }
+   @media screen and (max-width :800px) {
+     #footer {
+         padding: 4.5rem;
+         padding-left: 0rem;
+         padding-right: 0rem;
+     }
+     #footer a {
+       margin: 0.7rem;
+     }
+   }
+   @media screen and (max-width :720px) {
+    .client {
+      margin-top: 6rem;
+    }
+     .skills div {
+       margin-top: 60px;
+     }
+    #portfolio-items .span-1-of-2 img{
+       width: 90%;
+       margin: auto;
+    }
+    #portfolio-items h4 {
+      margin-top: 1rem;
+      margin-bottom: 5rem;
+    }
+    #catagory-buttons button:last-child {
+      margin-top: 1.5rem;
+    }
+    .section-subtitle {
+      width: 100%;
+      text-align: center;
+    }
+    .span-1-of-4 {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    .main-body-start {
+      padding-top: 9.7rem;
+    }
+    #top-nav {
+      padding: 2rem 1rem !important;
+      width: 100%;
+    }
+    #top-nav #logo {
+      float: none;
+      display: inline-block;
+      text-align: left;
+    }
+    .nav-menu {
+      float: none;
+    }
+    #nav-option {
+      display: none;
+    }
+    #nav-option a{
+      float: none;
+      display: block;
+    }
+    #menu-icon {
+      display: inline-block;
+    }
+    #footer {
+      text-align: center;
+    }
+    #footer a {
+      display: block;
+      margin: 0rem;
+      margin-top: 1rem;
+    }
+    textarea {
+      width: 100%;
+    }
+    #input-name , #input-email {
+      float: none;
+      margin-left: 0px;
+      width: 100%;
+    }
+   } 
+   @media screen and (max-width :420px) {
+    .main-body-start {
+      padding-top: 22rem;
+    }
+    html {
+       font-size: 50%;
+     }
+   }
+   @media screen and (max-width :375px) {
+    .main-body-start {
+      padding-top: 22rem;
+    }
+    h2 {
+       letter-spacing: 0rem;
+     }
+     #header a {
+       margin-top: 13rem;
+       margin-bottom: 10rem;
+     }
+     #header h1 {
+       font-size: 3rem;
+     }
+     #service-section , #team-section {
+       padding: 4rem;
+     }
+    #skill-section , #portfolio-section , #review-section , #contact-section {
+       padding: 5rem;
+    } 
+   }
+/* media query end */
